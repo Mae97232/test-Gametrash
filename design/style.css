@@ -282,6 +282,7 @@ a{
 
 }
 
+/* 480 : smartphone */
 @media (max-width: 600px) {
     #bienvenue {
       background-position: top;
