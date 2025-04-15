@@ -46,6 +46,15 @@ ol{
     gap: 15px;
 }
 
+.conteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* placer les élément en haut */
+    align-items: center;
+    
+
+}
+
 header{
     /*
     -nom (black white purple)
@@ -54,9 +63,10 @@ header{
     rgba rgba(rouge,vert, bleu, 0.4) */    
         font-size: 50px;
         font-family: 'boldonse',system-ui;
-        color: black;
+        color:black;
         text-shadow: 0 0 30PX grey;
         padding-top: 100px;
+
 }
 
 footer{
@@ -191,6 +201,30 @@ a{
     margin: 0 auto;
 }
 
+.produit {
+    width: 250px;
+    margin: 20px auto; /* centre la carte */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ombre douce */
+    transition: transform 0.3s ease;
+  }
+  
+  .produit:hover {
+    transform: scale(1.05); /* petit zoom au survol */
+  }
+  
+  .produit img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  
 /* LE RESPONSABLE DESIGN */
 
 /* 1024 : notebook */
@@ -244,3 +278,11 @@ a{
     }
 
 }
+
+/* 450 : smartphone */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
