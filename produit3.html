@@ -9,24 +9,11 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="burger" onclick="toggleMenu(this)">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="produits.html">Produits</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-
   <h1 class="titre-page">Nos GameBoys</h1>
 
   <div class="produit">
-    <image src="Images/gameboyblack.jpg" alt="GameBoyblack">
-      <h2>GameBoy black</h2>
+    <image src="Images/gameboyellow.jpg" alt="GameBoyyellow">
+      <h2>GameBoy yellow</h2>
 
       <p class="description">
         Redécouvrez la légende ! 🎮  
@@ -57,15 +44,5 @@
      </nav>
   </div>
 </footer>
-
- <!-- Script -->
- <script>
-  function toggleMenu(burger) {
-    burger.classList.toggle("active");
-    const nav = document.getElementById("navLinks");
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
-  }
-</script>
-
 </body>
 </html>

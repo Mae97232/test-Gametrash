@@ -7,17 +7,39 @@
         <link rel="stylesheet" href="design/style.css">
     </head>
 
+    <!-- ✅ MENU BURGER MODERNE -->
+  <nav class="navbar">
+   <div class="burger" onclick="toggleMenu(this)">
+     <div class="line1"></div>
+     <div class="line2"></div>
+     <div class="line3"></div>
+   </div>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="index.html">Accueil</a></li>
+     <li><a href="produits.html">Produits</a></li>
+     <li><a href="apropos.html">À propos</a></li>
+   </ul>
+ </nav>
+
     <body>
        <!-- CONTENEUR -->
       <section id="bienvenue">
           <!--EN TÊTE-->
-        <div class="conteneur">
-           <header>
-               <h1>Game Trash</h1> 
-               <span id="slogan">L'Expert des GameBoy – La nostalgie au creux de vos mains</span>
+    <div class="conteneur">
+           <!-- HEADER FIXE -->
+           <header class="top-header">
+            <div class="logo-texte">
+              <img src="images/game2.png" alt="Logo Game Trash" class="logo-header">
+              <div class="texte-header">
+                <h1>Game Trash</h1>
+                <span class="slogan">L'expert des GameBoy – La nostalgie au creux de vos mains</span>
+              </div>
+            </div>
           </header>
-        </div> 
+          
+    </div> 
       </section> 
+      
          
         
         <!-- Contenu -->
@@ -35,11 +57,11 @@
 
                   <a href="produit.html" id="GameBoyblack" class="Game">Noir</a>  
                  
-                  <a href="produit.html" id="GameBoywhite" class="Game">Blanc</a>
+                  <a href="produit2.html" id="GameBoywhite" class="Game">Blanc</a>
                 
-                  <a href="produit.html" id="GameBoyyellow" class="Game">Jaune</a>
+                  <a href="produit3.html" id="GameBoyyellow" class="Game">Jaune</a>
                 
-                  <a href="produit.html" id="GameBoypurple" class="Game">Violet</a>
+                  <a href="produit4.html" id="GameBoypurple" class="Game">Violet</a>
                 
                 </section>
                  
@@ -69,7 +91,17 @@
              </div>
              </nav>
           </div>
-         </footer>   
+         </footer>  
+          
+         <!-- ✅ SCRIPT BURGER MENU -->
+  <script>
+   function toggleMenu(burger) {
+     burger.classList.toggle("active");
+     const nav = document.getElementById("navLinks");
+     nav.style.display = nav.style.display === "block" ? "none" : "block";
+   }
+ </script>
+ 
      </body>
 </html>    
      
