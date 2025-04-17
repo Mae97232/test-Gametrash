@@ -2,107 +2,123 @@
 <html lang="fr">
     <head>
        <!--INFORMATION-->
-        <title>Mon premier site</title >
-        <link rel="icon" href="Images/favicon.ico" type="image/x=icon"/>
+        <title>Mon premier site</title>
+        <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="design/style.css">
     </head>
 
-    <!-- ✅ MENU BURGER MODERNE -->
-  <nav class="navbar">
-   <div class="burger" onclick="toggleMenu(this)">
-     <div class="line1"></div>
-     <div class="line2"></div>
-     <div class="line3"></div>
-   </div>
-   <ul class="nav-links" id="navLinks">
-     <li><a href="index.html">Accueil</a></li>
-     <li><a href="produits.html">Produits</a></li>
-     <li><a href="apropos.html">À propos</a></li>
-   </ul>
- </nav>
-
     <body>
+       <!-- ✅ MENU BURGER MODERNE -->
+       <nav class="navbar">
+          <div class="menu-burger" onclick="toggleMenu(this)">
+             <div class="bar"></div>
+             <div class="bar"></div>
+             <div class="bar"></div>
+          </div>
+          <ul class="nav-links" id="navLinks">
+             <li><a href="index.html">Accueil</a></li>
+             <li><a href="produit.html">Produits</a></li>
+             <li><a href="apropos.html">À propos</a></li>
+          </ul>
+       </nav>
+
        <!-- CONTENEUR -->
-      <section id="bienvenue">
+       <section id="bienvenue">
           <!--EN TÊTE-->
-    <div class="conteneur">
-           <!-- HEADER FIXE -->
-           <header class="top-header">
-            <div class="logo-texte">
-              <img src="images/game2.png" alt="Logo Game Trash" class="logo-header">
-              <div class="texte-header">
-                <h1>Game Trash</h1>
-                <span class="slogan">L'expert des GameBoy – La nostalgie au creux de vos mains</span>
-              </div>
-            </div>
-          </header>
-          
-    </div> 
-      </section> 
-      
-         
-        
-        <!-- Contenu -->
-        <section class="Contenu conteneur">
-             <!-- TOP -->
+          <div class="conteneur">
+             <!-- HEADER FIXE -->
+             <header class="top-header">
+                <div class="logo-texte">
+                   <img src="images/game2.png" alt="Logo Game Trash" class="logo-header">
+                   <div class="texte-header">
+                      <h1>Game Trash</h1>
+                      <span class="slogan">L'expert des GameBoy – La nostalgie au creux de vos mains</span>
+                   </div>
+                </div>
+             </header>
+          </div>
+       </section> 
+
+       <!-- Contenu -->
+       <section class="Contenu conteneur">
+          <!-- TOP -->
           <section>
-           <h1>Nos meilleur GameBoy</span></h1>
-           <p id="top">
+             <h1>Nos meilleurs GameBoy</h1>
+             <p id="top">
                 <span class="Italic">Rejouez aux classiques. Revivez la magie. Découvrez nos modèles dès maintenant</span>
-           </p>
-             
-            <section id="Flexbox-game">
+             </p>
 
-               <section id="Flexbox-game">
+             <section id="Flexbox-game">
+                <a href="produit.html" id="GameBoyblack" class="Game">Noir</a>
+                <a href="produit2.html" id="GameBoywhite" class="Game">Blanc</a>
+                <a href="produit3.html" id="GameBoyyellow" class="Game">Jaune</a>
+                <a href="produit4.html" id="GameBoypurple" class="Game">Violet</a>
+             </section>
 
-                  <a href="produit.html" id="GameBoyblack" class="Game">Noir</a>  
-                 
-                  <a href="produit2.html" id="GameBoywhite" class="Game">Blanc</a>
-                
-                  <a href="produit3.html" id="GameBoyyellow" class="Game">Jaune</a>
-                
-                  <a href="produit4.html" id="GameBoypurple" class="Game">Violet</a>
-                
-                </section>
-                 
+             <section class="apropos-accueil">
+                <div class="conteneur-apropos">
+                   <div class="texte-apropos">
+                      <h2>À propos de GameBoyStore</h2>
+                      <p>
+                         Bienvenue chez <strong>GameBoyStore</strong>, votre repaire de la nostalgie rétro ! Ici, chaque GameBoy est restaurée avec passion pour raviver vos souvenirs d’enfance.
+                      </p>
+                      <p>
+                         Nos modèles sont 100% testés, customisés et prêts à vous faire rejouer aux plus grands classiques. Rejoignez la communauté des vrais gamers rétro.
+                      </p>
+                      <a href="apropos.html" class="btn">En savoir plus</a>
+                   </div>
+                   <div class="image-apropos">
+                      <img src="Images/game2.png" alt="GameBoy Nostalgie">
+                   </div>
+                </div>
+             </section>
+
+          </section>
+       </section>
+
+       <!-- PIED -->
+       <footer>
+          <div id="flexbox-foot">
+             <!-- Logo Section -->
+             <div id="logo-foot">
+                <img src="Images/game2.png" alt="Logo">
+                <span class="footer-logo-text">Game trash</span>
+             </div>
+
+             <!-- Liens importants -->
+             <div class="footer-links">
+                <ul>
+                   <li><a href="#">À propos</a></li>
+                   <li><a href="#">Contact</a></li>
+                </ul>
+             </div>
+
+             <!-- Copyright -->
+             <div class="footer-bottom">
+                <p>&copy; 2025 Game trash. Tous droits réservés.</p>
+             </div>
+          </div>
+       </footer>
+
+       <!-- ✅ SCRIPT BURGER MENU -->
+       <script>
+          function toggleMenu(burger) {
+             burger.classList.toggle("active");
+             const nav = document.getElementById("navLinks");
+             nav.style.display = nav.style.display === "block" ? "none" : "block";
+          }
+       </script>
+    </body>
+</html>
+
+        
+ 
+    
                
 
-            </section>         
-
-            <!-- EN SAVOIR PLUS -->
-             <div style="text-align: right; margin-top: 10px;">
-               <a href="" style="display: inline-flex; align-items: center; color: #e5e7e6;;">En voir plus <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"/></svg> </a>
-             </div>
-          </section>
-        </section>
-      
-        <!-- PIED -->
-         <footer>
-          <div class="conteneur" id="flexbox-foot">
-             <div id="">
-               <img src="https://static.vecteezy.com/system/resources/previews/014/364/770/original/gameboy-joystick-icon-outline-style-vector.jpg" alt="GameBoy" style="width: 70px; display:block"/>
-                 2025 © Game trash
-             </div>
-             <nav> 
-                <ol>
-                  <li><a href="Index.html">Accueil</a></li>
-                  <li><a href="Apropos.html">A Propos</a></li>
-                </ol>
-             </div>
-             </nav>
-          </div>
-         </footer>  
-          
-         <!-- ✅ SCRIPT BURGER MENU -->
-  <script>
-   function toggleMenu(burger) {
-     burger.classList.toggle("active");
-     const nav = document.getElementById("navLinks");
-     nav.style.display = nav.style.display === "block" ? "none" : "block";
-   }
- </script>
- 
-     </body>
-</html>    
+           
+     
+     
      
  
+     

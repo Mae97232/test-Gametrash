@@ -4,45 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nos Produits</title>
-  <link rel="icon" href="Images/favicon.ico" type="image/x=icon"/>
   <link rel="stylesheet" href="design/style.css">
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 
+  <!-- ✅ NAVIGATION + MENU BURGER -->
+  <nav class="navbar">
+    <div class="logo">Game Trash</div>
+    <div class="burger" onclick="toggleMenu(this)">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="produit.html">Produits</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Titre de page -->
   <h1 class="titre-page">Nos GameBoys</h1>
 
+  <!-- ✅ Produit -->
   <div class="produit">
-    <image src="Images/gameboywhite.jpg" alt="GameBoywhite">
-      <h2>GameBoy white</h2>
-
-      <p class="description">
-        Redécouvrez la légende ! 🎮  
-        Cette GameBoy classique remise à neuf vous replonge dans l’âge d’or du rétro-gaming. Compacte, robuste et 100% fonctionnelle – idéale pour les passionnés et les collectionneurs !
-      </p>
-      
-      <p>89€</p>
-      <button>Acheter</button>
-    </div>
-    <nav> 
-      <ol>
-        <li><a href="Index.html">Accueil</a></li>
-        <li><a href="Apropos.html">A Propos</a></li>
-      </ol>
-   </nav>
-   <!-- PIED -->
-<footer>
-  <div class="conteneur" id="flexbox-foot">
-     <div>
-       <img src="https://static.vecteezy.com/system/resources/previews/014/364/770/original/gameboy-joystick-icon-outline-style-vector.jpg" alt="GameBoy" style="width: 70px; display:block"/>
-       2025 © Game trash
-     </div>
-     <nav> 
-        <ol>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="apropos.html">À propos</a></li>
-        </ol>
-     </nav>
+    <img src="Images/gameboywhite.jpg" alt="GameBoy white">
+    <h2>GameBoy White</h2>
+    <p class="description">
+      Redécouvrez la légende ! 🎮  
+      Cette GameBoy classique remise à neuf vous replonge dans l’âge d’or du rétro-gaming. Compacte, robuste et 100% fonctionnelle – idéale pour les passionnés et les collectionneurs !
+    </p>
+    <p class="prix">89€</p>
+    <button class="btn-achat">Acheter</button>
   </div>
-</footer>
+
+   <!-- PIED -->
+        <!-- Footer -->
+<footer>
+    <div id="flexbox-foot">
+      <!-- Logo Section -->
+      <div id="logo-foot">
+        <img src="Images/game2.png" alt="Logo">
+        <span class="footer-logo-text">Game trash</span>
+      </div>
+  
+      <!-- Liens importants -->
+      <div class="footer-links">
+        <ul>
+         <li><a href="#">À propos</a></li>
+         <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+     
+     <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Game trash. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- ✅ JavaScript pour le menu burger -->
+  <script>
+    function toggleMenu(element) {
+      element.classList.toggle("active");
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
