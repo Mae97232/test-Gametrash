@@ -558,5 +558,16 @@ footer {
   .image-apropos img:hover {
     transform: scale(1.05);
   }
+  /* Taille de police de base */
+body {
+    font-size: 16px; /* Cette taille s'adapte à tous les écrans */
+  }
+  
+  h1, h2, h3 {
+    font-size: 2.5rem;  /* Remplacer les 'px' par des 'rem' pour une taille de police relative */
+  }
+  
+  /* ... Autres styles pour le texte */
+  
   
   
