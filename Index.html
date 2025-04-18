@@ -7,120 +7,126 @@
       <title>Mon premier site</title>
       <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
       <link rel="stylesheet" href="design/style.css">
+      <style>
+         /* Scroll fluide et correction de position pour le header */
+         html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 120px; /* ajuste selon la hauteur de ton header */
+         }
+      </style>
   </head>
   
-    <body>
-       <!-- ✅ MENU BURGER MODERNE -->
-       <nav class="navbar">
-          <div class="menu-burger" onclick="toggleMenu(this)">
-             <div class="bar"></div>
-             <div class="bar"></div>
-             <div class="bar"></div>
-          </div>
-          <ul class="nav-links" id="navLinks">
-             <li><a href="index.html">Accueil</a></li>
-             <li><a href="produit.html">Produits</a></li>
-             <li><a href="apropos.html">À propos</a></li>
-          </ul>
-       </nav>
+  <body>
+     <!-- ✅ MENU BURGER MODERNE -->
+     <nav class="navbar">
+        <div class="menu-burger" onclick="toggleMenu(this)">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+           <li><a href="index.html">Accueil</a></li>
+           <li><a href="produit.html">Produits</a></li>
+           <li><a href="apropos.html">À propos</a></li> <!-- ✅ modifié ici -->
+        </ul>
+     </nav>
 
-       <!-- CONTENEUR -->
-       <section id="bienvenue">
-          <!--EN TÊTE-->
-          <div class="conteneur">
-             <!-- HEADER FIXE -->
-             <header class="top-header">
-                <div class="logo-texte">
-                   <img src="images/game2.png" alt="Logo Game Trash" class="logo-header">
-                   <div class="texte-header">
-                      <h1>Game Trash</h1>
-                      <span class="slogan">L'expert des GameBoy – La nostalgie au creux de vos mains</span>
-                   </div>
-                </div>
-             </header>
-          </div>
-       </section> 
+     <!-- CONTENEUR -->
+     <section id="bienvenue">
+        <div class="conteneur">
+           <header class="top-header">
+              <div class="logo-texte">
+                 <img src="images/game2.png" alt="Logo Game Trash" class="logo-header">
+                 <div class="texte-header">
+                    <h1>Game Trash</h1>
+                    <span class="slogan">L'expert des GameBoy – La nostalgie au creux de vos mains</span>
+                 </div>
+              </div>
+           </header>
+        </div>
+     </section> 
 
-       <!-- Contenu -->
-       <section class="Contenu conteneur">
-          <!-- TOP -->
-          <section>
-             <h1>Nos meilleurs GameBoy</h1>
-             <p id="top">
-                <span class="Italic">Rejouez aux classiques. Revivez la magie. Découvrez nos modèles dès maintenant</span>
-             </p>
+     <!-- Contenu -->
+     <section class="Contenu conteneur">
+        <section>
+           <h1>Nos meilleurs GameBoy</h1>
+           <p id="top">
+              <span class="Italic">Rejouez aux classiques. Revivez la magie. Découvrez nos modèles dès maintenant</span>
+           </p>
 
-             <section id="Flexbox-game">
-                <a href="produit.html" id="GameBoyblack" class="Game">Noir</a>
-                <a href="produit2.html" id="GameBoywhite" class="Game">Blanc</a>
-                <a href="produit3.html" id="GameBoyyellow" class="Game">Jaune</a>
-                <a href="produit4.html" id="GameBoypurple" class="Game">Violet</a>
-             </section>
+           <section id="Flexbox-game">
+              <a href="produit.html" id="GameBoyblack" class="Game">Noir</a>
+              <a href="produit2.html" id="GameBoywhite" class="Game">Blanc</a>
+              <a href="produit3.html" id="GameBoyyellow" class="Game">Jaune</a>
+              <a href="produit4.html" id="GameBoypurple" class="Game">Violet</a>
+           </section>
 
-             <section class="apropos-accueil">
-                <div class="conteneur-apropos">
-                   <div class="texte-apropos">
-                      <h2>À propos de GameBoyStore</h2>
-                      <p>
-                         Bienvenue chez <strong>GameBoyStore</strong>, votre repaire de la nostalgie rétro ! Ici, chaque GameBoy est restaurée avec passion pour raviver vos souvenirs d’enfance.
-                      </p>
-                      <p>
-                         Nos modèles sont 100% testés, customisés et prêts à vous faire rejouer aux plus grands classiques. Rejoignez la communauté des vrais gamers rétro.
-                      </p>
-                      <a href="apropos.html" class="btn">En savoir plus</a>
-                   </div>
-                   <div class="image-apropos">
-                      <img src="Images/game2.png" alt="GameBoy Nostalgie">
-                   </div>
-                </div>
-             </section>
+           <!-- ✅ ID ajouté ici pour que le lien fonctionne -->
+           <section class="apropos-accueil" id="apropos">
+              <div class="conteneur-apropos">
+                 <div class="texte-apropos">
+                    <h2>À propos de GameBoyStore</h2>
+                    <p>
+                       Bienvenue chez <strong>GameBoyStore</strong>, votre repaire de la nostalgie rétro ! Ici, chaque GameBoy est restaurée avec passion pour raviver vos souvenirs d’enfance.
+                    </p>
+                    <p>
+                       Nos modèles sont 100% testés, customisés et prêts à vous faire rejouer aux plus grands classiques. Rejoignez la communauté des vrais gamers rétro.
+                    </p>
+                    <a href="apropos.html" class="btn">En savoir plus</a>
+                 </div>
+                 <div class="image-apropos">
+                    <img src="Images/game2.png" alt="GameBoy Nostalgie">
+                 </div>
+              </div>
+           </section>
 
-          </section>
-       </section>
+        </section>
+     </section>
 
-       <!-- PIED -->
-       <footer>
-          <div id="flexbox-foot">
-             <!-- Logo Section -->
-             <div id="logo-foot">
-                <img src="Images/game2.png" alt="Logo">
-                <span class="footer-logo-text">Game trash</span>
-             </div>
+     <!-- PIED -->
+     <footer>
+        <div id="flexbox-foot">
+           <div id="logo-foot">
+              <img src="Images/game2.png" alt="Logo">
+              <span class="footer-logo-text">Game trash</span>
+           </div>
+           <div class="footer-links">
+              <ul>
+                 <li><a href="#">À propos</a></li>
+                 <li><a href="#">Contact</a></li>
+              </ul>
+           </div>
+           <div class="footer-bottom">
+              <p>&copy; 2025 Game trash. Tous droits réservés.</p>
+           </div>
+        </div>
+     </footer>
 
-             <!-- Liens importants -->
-             <div class="footer-links">
-                <ul>
-                   <li><a href="#">À propos</a></li>
-                   <li><a href="#">Contact</a></li>
-                </ul>
-             </div>
+     <script>
+      // Ferme le menu quand on clique sur un lien
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach(link => {
+         link.addEventListener("click", () => {
+            const burger = document.querySelector(".menu-burger");
+            const nav = document.getElementById("navLinks");
+   
+            if (burger.classList.contains("active")) {
+               burger.classList.remove("active");
+               nav.classList.remove("open"); // si tu utilises classList (recommandé)
+               nav.style.display = "none";   // si tu utilises le style (comme dans ton code actuel)
+            }
+         });
+      });
+   </script>
+   
 
-             <!-- Copyright -->
-             <div class="footer-bottom">
-                <p>&copy; 2025 Game trash. Tous droits réservés.</p>
-             </div>
-          </div>
-       </footer>
-
-       <!-- ✅ SCRIPT BURGER MENU -->
-       <script>
-          function toggleMenu(burger) {
-             burger.classList.toggle("active");
-             const nav = document.getElementById("navLinks");
-             nav.style.display = nav.style.display === "block" ? "none" : "block";
-          }
-       </script>
-    </body>
+     <!-- ✅ SCRIPT BURGER MENU -->
+     <script>
+        function toggleMenu(burger) {
+           burger.classList.toggle("active");
+           const nav = document.getElementById("navLinks");
+           nav.style.display = nav.style.display === "block" ? "none" : "block";
+        }
+     </script>
+  </body>
 </html>
-
-        
- 
-    
-               
-
-           
-     
-     
-     
- 
-     
