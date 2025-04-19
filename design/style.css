@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--main-bg);
   color: var(--text-color);
   line-height: 1.6;
@@ -399,33 +399,112 @@ footer {
     color: #ccc;
   }
   
-  /* === NAVBAR === */
-  .navbar {
-    background-color: #111;
-    padding: 1rem 2rem;
-  }
-  
-  .nav-links {
+
+ /* ✅ NAVBAR FIXÉE EN HAUT */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+ }
+
+ .logo-titre {
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+ .menu-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+ }
+ 
+ .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
+ }
+ 
+ /* Animation en croix */
+ .menu-burger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+ }
+ 
+ .menu-burger.active .bar:nth-child(2) {
+    opacity: 0;
+ }
+ 
+ .menu-burger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+ }
+ 
+
+ /* ✅ MENU SLIDE IN */
+ .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #00ffcc;
-    transition: 0.3s;
-  }
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+ }
 
-  .nav-links li:first-child {
-    display: none;
-  }
-   
-  
-  .nav-links li a:hover {
-    color: #fff;
-  }
+ .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+ }
+
+ .nav-links li {
+    margin: 10px 0;
+ }
+
+ .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+ }
+
+ /* ✅ Affichage desktop */
+ @media screen and (min-width: 768px) {
+    .menu-burger {
+       display: none;
+    }
+
+    .nav-links {
+       position: static;
+       flex-direction: row;
+       opacity: 1 !important;
+       transform: none !important;
+       pointer-events: auto !important;
+       background-color: transparent;
+       width: auto;
+       padding: 0;
+    }
+
+    .nav-links li {
+       margin: 0 15px;
+    }
+ }
   
   /* === ACCUEIL PRODUITS === */
   .produits-accueil {
@@ -480,7 +559,7 @@ footer {
   }
   
   .texte-apropos h2 {
-    font-family: 'Winky Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
     color: #00ffcc;
     margin-bottom: 20px;
@@ -522,7 +601,7 @@ footer {
     font-size: 2.5rem;
     color: #00ffcc;
     margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
+   font-family: 'Roboto', sans-serif;
   }
   
   .apropos-page p {
