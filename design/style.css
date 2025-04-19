@@ -59,7 +59,7 @@ body {
   }
   
   .texte-header h1 {
-    font-family: 'Winky Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 22px;
     text-align: center;
   }
@@ -89,7 +89,7 @@ body {
 
 /* === TYPOGRAPHIE === */
 h1, h2, h3 {
-  font-family: 'Boldonse', sans-serif;
+    font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px 0;
 }
@@ -130,7 +130,7 @@ h2 {
 .produits h1 {
   font-size: 48px;
   margin-bottom: 50px;
-  font-family: 'Winky Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
@@ -176,7 +176,7 @@ h2 {
 .produit h2 {
   font-size: 24px;
   margin-bottom: 15px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .produit p {
@@ -364,7 +364,7 @@ footer {
   }
   
   body {
-    font-family: 'Press Start 2P', cursive, sans-serif;
+    font-family: 'Press Start 2P','Roboto', sans-serif;
     background-color: #1a1a1a;
     color: #f5f5f5;
     line-height: 1.6;
@@ -522,7 +522,7 @@ footer {
     font-size: 2.5rem;
     color: #00ffcc;
     margin-bottom: 30px;
-    font-family: 'Winky Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   
   .apropos-page p {
