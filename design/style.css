@@ -506,7 +506,114 @@ footer {
   }
 }
 
+.faq-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .faq {
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq p {
+    color: #555;
+    line-height: 1.6;
+  }
 
+  .avis-section {
+    max-width: 600px;
+    margin: 1.5rem auto; /* 🔸 Réduit de 3rem à 1.5rem */
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .avis-section h2,
+  #listeAvis h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem; /* 🔸 Légèrement réduit */
+    color: #333;
+    text-align: center;
+  }
+  
+  #avisForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 🔸 Espacement réduit entre les éléments */
+  }
+  
+  #avisForm input,
+  #avisForm textarea,
+  #avisForm select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    resize: vertical;
+  }
+  
+  #avisForm button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+  
+  #avisForm button:hover {
+    background-color: #187bcd;
+  }
+  
+  .avis {
+    background-color: white;
+    padding: 0.6rem;
+    margin-top: 0.5rem; /* 🔸 Moins d’espace entre chaque avis */
+    border-radius: 8px;
+    border-left: 4px solid #1e90ff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .avis strong {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #222;
+  }
+  
+  .avis p {
+    margin: 0.1rem 0;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.note label {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .note select {
+    padding: 0.3rem;
+    font-size: 0.95rem;
+    border-radius: 4px;
+  }
+  
   
   
   

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Produits</title>
+  <title>GameBoy Color</title>
   <link rel="stylesheet" href="design/style.css">
   <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
 </head>
@@ -19,56 +19,119 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="produit.html">Produits</a></li>
-      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="produit.html">GameBoy Noire</a></li>
+      <li><a href="produit2.html">GameBoy Blanche</a></li>
+      <li><a href="produit3.html">GameBoy Jaune</a></li>
+      <li><a href="produit4.html">GameBoy Violete</a></li>
     </ul>
   </nav>
 
   <!-- ✅ Titre de page -->
-  <h1 class="titre-page">Nos GameBoys</h1>
+  <h1 class="titre-page">GameBoy Color</h1>
 
   <!-- ✅ Produit -->
   <div class="produit">
-    <img src="Images/gameboypurple.jpg" alt="GameBoy purple">
-    <h2>GameBoy purple</h2>
+    <img src="Images/gameboypurple.jpg" alt="GameBoy Purple">
+    <h2>GameBoy Violete</h2>
     <p class="description">
-      Redécouvrez la légende ! 🎮  
-      Cette GameBoy classique remise à neuf vous replonge dans l’âge d’or du rétro-gaming. Compacte, robuste et 100% fonctionnelle – idéale pour les passionnés et les collectionneurs !
+      La GameBoy Color, plus petite et plus colorée ! Profitez de vos jeux rétro préférés avec un écran plus lumineux et de nouveaux jeux compatibles.
     </p>
-    <p class="prix">89€</p>
+    <p class="prix">99€</p>
     <button class="btn-achat">Acheter</button>
   </div>
 
-   <!-- PIED -->
-        <!-- Footer -->
-<footer>
+  <section class="avis-section">
+    <h2>Laissez votre avis</h2>
+    <form id="avisForm">
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      
+      <div class="note">
+        <label for="note">Note :</label>
+        <select id="note" required>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+      </div>
+      
+      <button type="submit">Envoyer</button>
+    </form>
+  
+    <div id="listeAvis">
+      <h3>Avis des clients</h3>
+      <!-- Les avis s’afficheront ici -->
+    </div>
+  </section>
+
+
+  <!-- PIED -->
+  <footer>
     <div id="flexbox-foot">
-      <!-- Logo Section -->
       <div id="logo-foot">
         <img src="Images/game2.png" alt="Logo">
-        <span class="footer-logo-text">Game trash</span>
+        <span class="footer-logo-text">Game Trash</span>
       </div>
-  
-      <!-- Liens importants -->
+
       <div class="footer-links">
         <ul>
-         <li><a href="#">À propos</a></li>
-         <li><a href="#">Contact</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div>
      
-     <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 Game trash. Tous droits réservés.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Game Trash. Tous droits réservés.</p>
+      </div>
     </div>
   </footer>
-  
+
   <!-- ✅ JavaScript pour le menu burger -->
   <script>
     function toggleMenu(element) {
       element.classList.toggle("active");
       document.getElementById("navLinks").classList.toggle("active");
     }
+    const form = document.getElementById("avisForm");
+  const listeAvis = document.getElementById("listeAvis");
+  let avisArray = [];
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nom = document.getElementById("nom").value;
+    const message = document.getElementById("message").value;
+    const note = parseInt(document.getElementById("note").value);
+
+    const avis = {
+      nom: nom,
+      message: message,
+      note: note,
+      date: new Date()
+    };
+
+    avisArray.unshift(avis); // Ajoute en haut
+    afficherAvis();
+    form.reset(); // Réinitialise le formulaire
+  });
+
+  function afficherAvis() {
+    const avisHtml = avisArray.map(avis => {
+      const etoiles = "⭐".repeat(avis.note);
+      return `
+        <div class="avis">
+          <strong>${avis.nom}</strong>
+          <p>${avis.message}</p>
+          <p>${etoiles}</p>
+        </div>
+      `;
+    }).join("");
+
+    listeAvis.innerHTML = "<h3>Avis des clients</h3>" + avisHtml;
+  }
   </script>
 </body>
 </html>
