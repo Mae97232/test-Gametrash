@@ -23,6 +23,7 @@
       <li><a href="produit2.html">GameBoy Blanche</a></li>
       <li><a href="produit3.html">GameBoy Jaune</a></li>
       <li><a href="produit4.html">GameBoy Violete</a></li>
+      <li><a href="panier.html">Panier</a></li> <!-- Ajout du lien Panier -->
     </ul>
   </nav>
 
@@ -39,6 +40,7 @@
     </p>
     <p class="prix">89€</p>
     <button class="btn-achat">Acheter</button>
+    <button class="btn-achat" onclick="ajouterAuPanier('GameBoy Black', 89)">Ajouter au panier</button>
   </div>
 
   <section class="avis-section">
@@ -133,6 +135,51 @@
 
     listeAvis.innerHTML = "<h3>Avis des clients</h3>" + avisHtml;
   }
+  // Initialisation du panier
+let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+// Fonction pour ajouter un produit au panier
+function ajouterAuPanier(nomProduit, prix) {
+  const produit = {
+    nom: nomProduit,
+    prix: prix,
+    quantite: 1
+  };
+
+  // Vérifier si le produit est déjà dans le panier
+  const produitExist = panier.find(item => item.nom === nomProduit);
+  if (produitExist) {
+    produitExist.quantite += 1;  // Augmenter la quantité si déjà présent
+  } else {
+    panier.push(produit);  // Ajouter le produit au panier
+  }
+
+  // Sauvegarder le panier dans le localStorage
+  localStorage.setItem('panier', JSON.stringify(panier));
+
+  // Afficher une notification ou alerte pour l'utilisateur
+  alert(`${nomProduit} a été ajouté au panier !`);
+}
+
+// Fonction pour afficher le panier (à intégrer dans la page Panier)
+function afficherPanier() {
+  const panierContainer = document.getElementById('panierContainer');
+  panierContainer.innerHTML = '';  // Vider le panier affiché
+
+  panier.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('panier-item');
+    div.innerHTML = `<p>${item.nom} - ${item.prix}€ x ${item.quantite}</p>`;
+    panierContainer.appendChild(div);
+  });
+
+  // Afficher le total
+  const total = panier.reduce((sum, item) => sum + item.prix * item.quantite, 0);
+  const totalDiv = document.createElement('div');
+  totalDiv.innerHTML = `<p>Total : ${total}€</p>`;
+  panierContainer.appendChild(totalDiv);
+}
+
   </script>
 </body>
 </html>

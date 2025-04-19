@@ -613,6 +613,61 @@ footer {
     font-size: 0.95rem;
     border-radius: 4px;
   }
+
+  @media screen and (max-width: 600px) {
+    .avis-section {
+      padding: 0.8rem;
+      margin: 1rem;
+      max-width: 95%;
+    }
+  
+    #avisForm input,
+    #avisForm textarea,
+    #avisForm select,
+    #avisForm button {
+      font-size: 0.85rem;
+      padding: 0.4rem;
+    }
+  
+    .avis p {
+      font-size: 0.8rem;
+    }
+  
+    .avis-section h2,
+    #listeAvis h3 {
+      font-size: 1rem;
+    }
+  }
+
+  /* Styles pour le bouton "Ajouter au panier" */
+.btn-achat {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-achat:hover {
+    background-color: #218838;
+  }
+  
+  /* Styles pour la section Panier */
+  #panierContainer {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .panier-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  #panierContainer p {
+    font-size: 18px;
+  }
   
   
   

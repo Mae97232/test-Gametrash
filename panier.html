@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier</title>
+  <link rel="stylesheet" href="design/style.css">
+</head>
+<body>
+
+  <h1>Votre Panier</h1>
+
+  <div id="panierContainer">
+    <!-- Les articles du panier seront affichés ici -->
+  </div>
+
+  <script src="panier.js"> <!-- Inclure le fichier JavaScript -->
+  // Initialisation du panier
+let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+// Fonction pour ajouter un produit au panier
+function ajouterAuPanier(nomProduit, prix) {
+  const produit = {
+    nom: nomProduit,
+    prix: prix,
+    quantite: 1
+  };
+
+  // Vérifier si le produit est déjà dans le panier
+  const produitExist = panier.find(item => item.nom === nomProduit);
+  if (produitExist) {
+    produitExist.quantite += 1;  // Augmenter la quantité si déjà présent
+  } else {
+    panier.push(produit);  // Ajouter le produit au panier
+  }
+
+  // Sauvegarder le panier dans le localStorage
+  localStorage.setItem('panier', JSON.stringify(panier));
+
+  // Afficher une notification ou alerte pour l'utilisateur
+  alert(`${nomProduit} a été ajouté au panier !`);
+}
+
+// Fonction pour afficher le panier (à intégrer dans la page Panier)
+function afficherPanier() {
+  const panierContainer = document.getElementById('panierContainer');
+  panierContainer.innerHTML = '';  // Vider le panier affiché
+
+  panier.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('panier-item');
+    div.innerHTML = `<p>${item.nom} - ${item.prix}€ x ${item.quantite}</p>`;
+    panierContainer.appendChild(div);
+  });
+
+  // Afficher le total
+  const total = panier.reduce((sum, item) => sum + item.prix * item.quantite, 0);
+  const totalDiv = document.createElement('div');
+  totalDiv.innerHTML = `<p>Total : ${total}€</p>`;
+  panierContainer.appendChild(totalDiv);
+}
+</script>
+</body>
+</html>
